@@ -14,9 +14,16 @@
   },
   "permissions": [
     "activeTab",
-    "cookies"
+    "cookies",
+    "storage"
   ],
   "host_permissions": [
     "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["./static/js/content.js"]
+    }
   ]
 }
